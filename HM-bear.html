@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    .container {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .bigBlack {
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: #000;
+    }
+
+    .ear-Black::before {
+      content: "";
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #000;
+      position: absolute;
+      left: 10%;
+    }
+
+    .ear-Black::after {
+      content: "";
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #000;
+      position: absolute;
+      right: 10%;
+    }
+
+    .ear-White::before {
+      content: "";
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #fff;
+      position: absolute;
+      left: 13%;
+      top: 3%;
+    }
+
+    .ear-White::after {
+      content: "";
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #fff;
+      position: absolute;
+      right: 13%;
+      top: 3%;
+      z-index: 1;
+    }
+
+    .eye-White::before {
+      content: "";
+      width: 100px;
+      height: 100px;
+      background: #fff;
+      border-radius: 50%;
+      position: absolute;
+      left: 30%;
+      top: 30%;
+      transform: translate(-50%, -50%);
+    }
+
+    .eye-White::after {
+      content: "";
+      width: 100px;
+      height: 100px;
+      background: #fff;
+      border-radius: 50%;
+      position: absolute;
+      right: 10%;
+      top: 30%;
+      transform: translate(-50%, -50%);
+    }
+
+    .eye-Black::before {
+      content: "";
+      width: 70px;
+      height: 70px;
+      background: #000;
+      border-radius: 50%;
+      position: absolute;
+      left: 30%;
+      top: 30%;
+      transform: translate(-50%, -50%);
+    }
+
+    .eye-Black::after {
+      content: "";
+      width: 70px;
+      height: 70px;
+      background: #000;
+      border-radius: 50%;
+      position: absolute;
+      right: 16%;
+      top: 30%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    /* 白嘴巴 */
+    .mouth {
+      width: 220px;
+      height: 150px;
+      background: #fff;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 40%;
+      transform: translate(-50%);
+    }
+
+    /* 鼻子 */
+    .mouth::before {
+      content: "";
+      width: 45px;
+      height: 30px;
+      background: #000;
+      border-radius: 50%;
+      position: absolute;
+      top: 7%;
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+    /* 黑嘴巴 */
+    .mouth::after {
+      content: "";
+      width: 130px;
+      height: 50px;
+      background: #000;
+      border-radius: 50%;
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+    .red::before {
+      content: "";
+      width: 120px;
+      height: 120px;
+      background: red;
+      border-radius: 50%;
+      position: absolute;
+      left: -5%;
+      top: 40%;
+    }
+
+    .red::after {
+      content: "";
+      width: 120px;
+      height: 120px;
+      background: red;
+      border-radius: 50%;
+      position: absolute;
+      right: -5%;
+      top: 40%;
+    }
+
+    /* V左右 */
+    .V::before {
+      content: "";
+      width: 65px;
+      height: 70PX;
+      background: #fff;
+      position: absolute;
+      left: 34%;
+      top: 78%;
+      transform: skew(50deg);
+    }
+    
+    .V::after {
+      content: "";
+      width: 65px;
+      height: 70PX;
+      background: #fff;
+      position: absolute;
+      right: 34%;
+      top: 78%;
+      transform: skew(-50deg);
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="bigBlack">
+      <div class="ear-Black">
+        <div class="ear-White"></div>
+      </div>
+    </div>
+    <div class="eye-White">
+      <div class="eye-Black"></div>
+    </div>
+    <div class="mouth"></div>
+    <div class="red"></div>
+    <div class="V"></div>
+  </div>
+</body>
+</html>
