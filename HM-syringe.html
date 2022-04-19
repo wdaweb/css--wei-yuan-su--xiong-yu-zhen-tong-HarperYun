@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* 粗圓柱 */
+    .box1 {
+      width: 500px;
+      height: 100px;
+      border: 1px solid #111;
+      color: #888;
+      background: linear-gradient(90deg, #fff 45%, #000 45%, #000 55%, #ffa 55%);
+      font-family: '微軟正黑體';
+      font-weight: 600;
+      line-height: 1100%;
+    }
+
+    /* 刻度-not yet */
+    .box1::before {
+      content: "";
+      width: 500px;
+      height: 15px;
+      background: repeating-linear-gradient(
+        90deg, 
+        rgb(255, 255, 255, 0),
+        rgb(255, 255, 255, 0) 3%,
+        rgb(0, 0, 0) 3.5%);
+      position: absolute;
+    }
+
+    /* 上下漸層 */
+    .box1::after {
+      content: "";
+      width: 500px;
+      height: 100px;
+      opacity: 0.2;
+      background: linear-gradient(#fff, #000, #fff);
+      position: absolute;
+      left: 0%;
+    }
+
+    /* 細圓柱 */
+    .box2 {
+      width: 600px;
+      height: 70px;
+      border: 1px solid #111;
+      border-radius: 0px 10px 10px 0;
+      background: linear-gradient(#fff, #d2d2d2, #fff);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+
+    /* 推子 */
+    .box2::before {
+      content: "";
+      width: 50px;
+      height: 100px;
+      background: linear-gradient(#fff, #d2d2d2, #fff);
+      border: 1px solid #000;
+      border-radius: 5px;
+      position: absolute;
+      left: -8%;
+      top: 50%;
+      transform: translate(0%, -50%);
+    }
+
+    /* 針尖 */
+    .box2::after {
+      content: "";
+      width: 100px;
+      height: 1px;
+      background: #000;
+      position: absolute;
+      right: -25%;
+      top: 50%;
+      transform: translate(-50%, 0%);
+    }
+
+  </style>
+  </head>
+  <body>
+  <div class="container">
+    <div class="box1">Made in Taiwan</div>
+    <div class="box2"></div>
+  </div>
+</body>
+</html>
